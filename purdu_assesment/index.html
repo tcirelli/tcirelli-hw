@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Learn JS with HTML</title>
+        <meta name="description" content="Some interview assignment.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#fafafa">
+        <style>
+            form {
+                display: table;
+            }
+
+            form > div{
+                display: table-row;
+            }
+
+            form > div > label, form > div > input {
+                display: table-cell;
+                margin-bottom: 10px;
+            }
+
+            form > div > label {
+                padding-right: 10px;
+            }
+
+            .password-msg {
+                margin-left: 3px;
+            }
+
+            #userMessage {
+                margin-top: 10px;
+                width: 400px;
+                height: 200px;
+            }
+            #userMessage.hidden {
+                display: none;
+            }
+
+            #userMessage textarea {
+                width: 100%;
+                height: 100%;
+                color: green;
+                background-color: black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <noscript>This form requires JavaScript enabled.</noscript>
+        <section>
+            <form id="userForm" name="userForm" action="#" method="get">
+                <div>
+                    <label for="fname">First name:</label>
+                    <input name="fname" id="fname" type="text" placeholder="Bob" value="" minlength="1" maxlength="80" title="First name" required/>
+                </div>
+                <div>
+                    <label for="lname">Last name:</label>
+                    <input name="lname" id="lname" type="text" placeholder="Smith" value="" minlength="1" maxlength="80" title="Last name" required/>
+                </div>
+                <div>
+                    <label for="uid">User ID :</label>
+                    <input name="uid" id="uid" type="text" placeholder="Smith123" value="" minlength="8" maxlength="12" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,12}$" title="User ID must contain an uppercase, a lowercase, a number, and be 8 to 12 characters long." required/>
+                    <span class="password-msg">(Must contain an uppercase, a lowercase, a number, and be 8 to 12 characters long)</span>
+                </div>
+                <div>
+                    <label for="birthday">Birthday:</label>
+                    <input name="birthday" id="birthday" type="date" title="Birthday" value="1992-09-21" min="1902-01-01" required/>
+                </div>
+                <div>
+                    <input type="submit" value="Accept">
+                </div>
+            </form>
+            <div id="userMessage" class="hidden">
+                <textarea placeholder="Form result message" readonly></textarea>
+            </div>
+            <span id="xContainer"></span>
+        </section>
+
+        <script>
+            (()=> {
+                const formElem = document.body.querySelector('form#userForm'),
+                    outputElem = document.body.querySelector('div#userMessage'),
+                    xContainerElem = document.body.querySelector('#xContainer');
+
+                for(let i=1; i<=20; i++) {
+                    xContainerElem.innerHTML += "".padStart(i, 'X') + '<br/>';
+                }
+
+                formElem.addEventListener('submit', e=> {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    if(isValideForm()) {
+                        msgUser();
+                    }
+                });
+
+                function dateDiff(date1, date2 = Date.now()) {
+                    return ~~((new Date(date2) - new Date(date1))/1000/60/60/24);
+                }
+
+                function isValideForm() {
+                    return true; //Form has validation in it.
+                }
+
+                function msgUser() {
+                    let fname = formElem.querySelector('#fname').value || '',
+                        lname = formElem.querySelector('#lname').value || '',
+                        bdate = formElem.querySelector('#birthday').value || '1902-01-01',
+                        days = dateDiff(bdate);
+
+                    output(`${fname} ${lname} you have been breathing for ${days} days!`)
+
+                    if(days < 365*18) {
+                        output('You are propbably not old enough to take this class!')
+                    }
+
+                    showOutput();
+                }
+
+                function output(msg) {
+                    let ta = outputElem.querySelector('textarea'); //document.getElementById('who cares').innerHTML not innerHtml!
+                    ta.value += msg + '\n';
+                }
+
+                function showOutput() {
+                    outputElem.classList.remove('hidden');
+                }
+
+                function hideOutput() {
+                    outputElem.classList.add('hidden');
+                }
+            })();
+        </script>
+    </body>
+</html>
