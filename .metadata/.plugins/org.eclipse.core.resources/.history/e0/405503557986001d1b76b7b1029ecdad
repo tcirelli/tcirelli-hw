@@ -1,0 +1,175 @@
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
+
+
+public class IT391_Cirelli_Unit3 {
+
+	public static void main(String[] args) {
+		// *********************************************************
+		// ****Assignment 1, Part A, Section 1
+		// *********************************************************
+		System.out.printf("\n");
+		System.out.printf("**********Assignment 3, Part A, Section 1**********\n");
+		System.out.printf("\n");
+
+		String[] professionNames = { "Software Engineer", "Programmer", "Database Admin", "Network Admin",
+				"Web Developer", "Program Manager" };
+
+		List<String> professionNameSet = Arrays.asList(professionNames);
+
+		System.out.printf("Original List:\n");
+		System.out.printf("[" + String.join(", ", professionNameSet) + "]\n\n");
+
+		Collections.sort(professionNameSet);
+
+		System.out.printf("Sorted List:\n");
+		System.out.printf("[" + String.join(", ", professionNameSet) + "]\n\n");
+
+		// *********************************************************
+		// ****Assignment 3, Part A, Section 2
+		// *********************************************************
+		System.out.printf("\n");
+		System.out.printf("**********Assignment 3, Part A, Section 2**********\n");
+		System.out.printf("\n");
+
+		String[] titles = { "To Kill a Mockingbird", "Huckleberry Finn", "Pride and Prejudice", "Brave New World",
+				"Lord of the Flies", "Alice in Wonderland", "The Old Man and the Sea", "Atlas Shrugged" };
+
+		LinkedList<String> titleList = new LinkedList<String>(Arrays.asList(titles));
+
+		System.out.printf("Original Book List:\n");
+		System.out.printf("[" + String.join(", ", titleList) + "]\n\n");
+
+		titleList.sort(Comparator.naturalOrder());
+		System.out.printf("Sorted Book List:\n");
+		System.out.printf("[" + String.join(", ", titleList) + "]\n\n");
+
+		titleList.remove(1);
+		titleList.removeFirst();
+		titleList.removeLast();
+
+		System.out.printf("Book List After Deletions:\n");
+		System.out.printf("[" + String.join(", ", titleList) + "]\n\n");
+		System.out.printf("The number of items in my book list is:" + titleList.size() + "\n\n");
+
+		if (titleList.contains("Brave New World")) {
+			System.out.printf("Brave New World is in the list.\n");
+		}
+
+		// *********************************************************
+		// ****Assignment 3, Part A, Section 3
+		// *********************************************************
+
+		System.out.printf("\n");
+		System.out.printf("**********Assignment 3, Part A, Section 3**********\n");
+		System.out.printf("\n");
+
+		BinaryTree bt = new BinaryTree();
+		bt.insert(50);
+		bt.insert(30);
+		bt.insert(45);
+		bt.insert(12);
+		bt.insert(29);
+
+		System.out.println("The contents of the binary tree are:\n");
+		bt.inOrder(bt.root);
+		
+	}
+
+}
+
+class BinaryTree {
+	// first node
+	public Node root;
+
+	BinaryTree() {
+		root = null;
+	}
+
+	// Class representing tree nodes
+	static class Node {
+		int value;
+		Node left;
+		Node right;
+
+		Node(int value) {
+			this.value = value;
+			left = null;
+			right = null;
+		}
+
+		public void displayData() {
+			System.out.print(value + " ");
+		}
+	}
+
+	public void insert(int i) {
+		root = insert(root, i);
+	}
+
+	// Inserting node - recursive method
+	public Node insert(Node node, int value) {
+		if (node == null) {
+			return new Node(value);
+		}
+		// Move to the left if passed value is
+		// less than the current node
+		if (value < node.value) {
+			node.left = insert(node.left, value);
+		}
+		// Move to the right if passed value is
+		// greater than the current node
+		else if (value > node.value) {
+			node.right = insert(node.right, value);
+		}
+		return node;
+	}
+
+	// Search node in binary search tree
+	public Node find(int searchedValue) {
+		Node current = root;
+		while (current.value != searchedValue) {
+			if (searchedValue < current.value)
+				// Move to the left if searched value is less
+				current = current.left;
+			else
+				// Move to the right if searched value is >=
+				current = current.right;
+			if (current == null) {
+				return null;
+			}
+		}
+		return current;
+	}
+
+	// For traversing in order
+	public void inOrder(Node node) {
+		if (node != null) {
+			inOrder(node.left);
+			node.displayData();
+			inOrder(node.right);
+		}
+	}
+
+	// Preorder traversal
+	public void preOrder(Node node) {
+		if (node != null) {
+			node.displayData();
+			preOrder(node.left);
+			preOrder(node.right);
+		}
+	}
+
+	// Postorder traversal
+	public void postOrder(Node node) {
+		if (node != null) {
+			postOrder(node.left);
+			postOrder(node.right);
+			node.displayData();
+		}
+	}
+}

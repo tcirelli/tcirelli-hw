@@ -1,0 +1,62 @@
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+public class IT391_Cirelli_Unit3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//*********************************************************
+		//****Assignment 1, Part A, Section 1
+		//*********************************************************
+		 System.out.printf("\n"); 
+	     System.out.printf("**********Assignment 3, Part A, Section 1**********\n");
+	     System.out.printf("\n");
+		
+	    String[] professions = { "Software Engineer", "Programmer",
+	    	"Database Admin", "Network Admin", "Web Developer", "Program Manager"};
+	  
+       
+	    Set<String> setprofessions = new HashSet<String>(Arrays.asList(professions));
+        
+
+	    try
+	    {
+	    	 for (int i = 0; i <= professions.length - 1; i++) 
+	    	 {
+                 setprofessions.add(professions[i]);
+	    	 }
+	    }
+	    System.out.printf("Original List: ");
+	    System.out.printf("[");
+	    
+	    for (int i = 0; i <= professions.length - 1; i++)
+	    {
+	    	System.out.print(professions[i]);
+	    	if (i == professions.length - 1)
+	    	{
+	    		System.out.printf("]");
+	    	}
+	    	else
+	    	{
+	    		System.out.printf(",");
+	    	}
+	    }
+	    System.out.printf("\n");
+	    System.out.printf("\n");
+	    
+	    System.out.printf("Sorted List: ");
+	    SortedSet<String> sortedProfessions = new TreeSet<String>();
+	    System.out.printf("[");
+	   
+	    
+	}
+}

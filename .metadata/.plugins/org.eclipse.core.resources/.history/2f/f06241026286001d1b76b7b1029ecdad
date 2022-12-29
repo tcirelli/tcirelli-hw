@@ -1,0 +1,141 @@
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+public class IT391_Cirelli_Unit3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//*********************************************************
+		//****Assignment 1, Part A, Section 1
+		//*********************************************************
+		 System.out.printf("\n"); 
+	     System.out.printf("**********Assignment 3, Part A, Section 1**********\n");
+	     System.out.printf("\n");
+		
+	    String[] professionNames = { "Software Engineer", "Programmer",
+	    	"Database Admin", "Network Admin", "Web Developer", "Program Manager"};
+	    
+	    List<String> professionNameSet = Arrays.asList(professionNames);
+	    
+	    System.out.printf("Original List:\n");
+        System.out.printf("[" + String.join(", ", professionNameSet )+ "]\n\n");
+        
+	    Collections.sort(professionNameSet);
+	    
+        System.out.printf("Sorted List:\n");
+        System.out.printf("[" + String.join(", ", professionNameSet)+ "]\n\n");
+       
+        
+      //*********************************************************
+      //****Assignment 3, Part A, Section 2
+      //*********************************************************
+        System.out.printf("\n"); 
+	    System.out.printf("**********Assignment 3, Part A, Section 2**********\n");
+	    System.out.printf("\n");
+	    
+        String[] titles = {"To Kill a Mockingbird", "Huckleberry Finn", "Pride and Prejudice", 
+        		"Brave New World", "Lord of the Flies", "Alice in Wonderland", "The Old Man and the Sea",
+        		"Atlas Shrugged"};
+        
+        LinkedList<String> titleList = new LinkedList<String>(Arrays.asList(titles));
+              
+        System.out.printf("Original Book List:\n");
+        System.out.printf("[" + String.join(", ", titleList)+"]\n\n");
+        
+        titleList.sort(Comparator.naturalOrder()); 
+        System.out.printf("Sorted Book List:\n");
+        System.out.printf("[" + String.join(", ", titleList)+"]\n\n");
+        
+        titleList.remove(1);
+        titleList.removeFirst();
+        titleList.removeLast();
+        
+        System.out.printf("Book List After Deletions:\n");
+        System.out.printf("[" + String.join(", ", titleList)+"]\n\n");
+        System.out.printf("The number of items in my book list is:" + titleList.size()+"\n\n");
+        
+        if(titleList.contains("Brave New World")){
+        	System.out.printf("Brave New World is in the list.\n");
+        }
+        
+        
+        
+        //*********************************************************
+        //****Assignment 3, Part A, Section 3
+        //*********************************************************
+        
+        System.out.printf("\n"); 
+  	    System.out.printf("**********Assignment 3, Part A, Section 3**********\n");
+  	    System.out.printf("\n");
+  	    System.out.printf("The contents of the binary tree are:\n ");
+  	    
+  	    
+	}
+
+class Node 
+{
+    int value;
+    Node left;
+    Node right;
+
+    Node(int value) {
+        this.value = value;
+        right = null;
+        left = null;
+    }
+}
+class BinaryTree {
+
+    Node root;
+
+    private Node addRecursive(Node current, int value) {
+        if (current == null) {
+            return new Node(value);
+        }
+
+        if (value < current.value) {
+            current.left = addRecursive(current.left, value);
+        } else if (value > current.value) {
+            current.right = addRecursive(current.right, value);
+        } else {
+            // value already exists
+            return current;
+        }
+
+        return current;
+    }
+    public void add(int value) {
+        root = addRecursive(root, value);
+    }
+    private BinaryTree createBinaryTree() {
+        BinaryTree bt = new BinaryTree();
+
+        bt.add(6);
+        bt.add(4);
+        bt.add(8);
+        bt.add(3);
+        bt.add(5);
+        bt.add(7);
+        bt.add(9);
+
+        return bt;
+    }
+    public void traverseInOrder(Node node) {
+        if (node != null) {
+            traverseInOrder(node.left);
+            System.out.print(" " + node.value);
+            traverseInOrder(node.right);
+        }
+    }
+}
+}
