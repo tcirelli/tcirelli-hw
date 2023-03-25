@@ -1,0 +1,15 @@
+C:\Users\thita\source\repos\Unit10\Unit10\bin\Debug\net7.0\Unit10.exe
+C:\Users\thita\source\repos\Unit10\Unit10\bin\Debug\net7.0\Unit10.deps.json
+C:\Users\thita\source\repos\Unit10\Unit10\bin\Debug\net7.0\Unit10.runtimeconfig.json
+C:\Users\thita\source\repos\Unit10\Unit10\bin\Debug\net7.0\Unit10.dll
+C:\Users\thita\source\repos\Unit10\Unit10\bin\Debug\net7.0\Unit10.pdb
+C:\Users\thita\source\repos\Unit10\Unit10\obj\Debug\net7.0\Unit10.csproj.AssemblyReference.cache
+C:\Users\thita\source\repos\Unit10\Unit10\obj\Debug\net7.0\Unit10.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thita\source\repos\Unit10\Unit10\obj\Debug\net7.0\Unit10.AssemblyInfoInputs.cache
+C:\Users\thita\source\repos\Unit10\Unit10\obj\Debug\net7.0\Unit10.AssemblyInfo.cs
+C:\Users\thita\source\repos\Unit10\Unit10\obj\Debug\net7.0\Unit10.csproj.CoreCompileInputs.cache
+C:\Users\thita\source\repos\Unit10\Unit10\obj\Debug\net7.0\Unit10.dll
+C:\Users\thita\source\repos\Unit10\Unit10\obj\Debug\net7.0\refint\Unit10.dll
+C:\Users\thita\source\repos\Unit10\Unit10\obj\Debug\net7.0\Unit10.pdb
+C:\Users\thita\source\repos\Unit10\Unit10\obj\Debug\net7.0\Unit10.genruntimeconfig.cache
+C:\Users\thita\source\repos\Unit10\Unit10\obj\Debug\net7.0\ref\Unit10.dll

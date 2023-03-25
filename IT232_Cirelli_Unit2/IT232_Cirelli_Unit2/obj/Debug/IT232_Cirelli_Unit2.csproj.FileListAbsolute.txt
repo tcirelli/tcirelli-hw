@@ -1,0 +1,11 @@
+C:\Users\thita\source\repos\IT232_Cirelli_Unit2\IT232_Cirelli_Unit2\bin\Debug\IT232_Cirelli_Unit2.exe.config
+C:\Users\thita\source\repos\IT232_Cirelli_Unit2\IT232_Cirelli_Unit2\bin\Debug\IT232_Cirelli_Unit2.exe
+C:\Users\thita\source\repos\IT232_Cirelli_Unit2\IT232_Cirelli_Unit2\bin\Debug\IT232_Cirelli_Unit2.pdb
+C:\Users\thita\source\repos\IT232_Cirelli_Unit2\IT232_Cirelli_Unit2\obj\Debug\IT232_Cirelli_Unit2.csproj.AssemblyReference.cache
+C:\Users\thita\source\repos\IT232_Cirelli_Unit2\IT232_Cirelli_Unit2\obj\Debug\IT232_Cirelli_Unit2.csproj.SuggestedBindingRedirects.cache
+C:\Users\thita\source\repos\IT232_Cirelli_Unit2\IT232_Cirelli_Unit2\obj\Debug\IT232_Cirelli_Unit2.Form1.resources
+C:\Users\thita\source\repos\IT232_Cirelli_Unit2\IT232_Cirelli_Unit2\obj\Debug\IT232_Cirelli_Unit2.Properties.Resources.resources
+C:\Users\thita\source\repos\IT232_Cirelli_Unit2\IT232_Cirelli_Unit2\obj\Debug\IT232_Cirelli_Unit2.csproj.GenerateResource.cache
+C:\Users\thita\source\repos\IT232_Cirelli_Unit2\IT232_Cirelli_Unit2\obj\Debug\IT232_Cirelli_Unit2.csproj.CoreCompileInputs.cache
+C:\Users\thita\source\repos\IT232_Cirelli_Unit2\IT232_Cirelli_Unit2\obj\Debug\IT232_Cirelli_Unit2.exe
+C:\Users\thita\source\repos\IT232_Cirelli_Unit2\IT232_Cirelli_Unit2\obj\Debug\IT232_Cirelli_Unit2.pdb

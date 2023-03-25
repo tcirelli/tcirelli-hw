@@ -1,0 +1,11 @@
+C:\Users\thita\source\repos\IT391_Unit6\IT391_Unit6\bin\Debug\IT391_Unit6.exe.config
+C:\Users\thita\source\repos\IT391_Unit6\IT391_Unit6\bin\Debug\IT391_Unit6.exe
+C:\Users\thita\source\repos\IT391_Unit6\IT391_Unit6\bin\Debug\IT391_Unit6.pdb
+C:\Users\thita\source\repos\IT391_Unit6\IT391_Unit6\obj\Debug\IT391_Unit6.csproj.AssemblyReference.cache
+C:\Users\thita\source\repos\IT391_Unit6\IT391_Unit6\obj\Debug\IT391_Unit6.csproj.SuggestedBindingRedirects.cache
+C:\Users\thita\source\repos\IT391_Unit6\IT391_Unit6\obj\Debug\IT391_Unit6.Form1.resources
+C:\Users\thita\source\repos\IT391_Unit6\IT391_Unit6\obj\Debug\IT391_Unit6.Properties.Resources.resources
+C:\Users\thita\source\repos\IT391_Unit6\IT391_Unit6\obj\Debug\IT391_Unit6.csproj.GenerateResource.cache
+C:\Users\thita\source\repos\IT391_Unit6\IT391_Unit6\obj\Debug\IT391_Unit6.csproj.CoreCompileInputs.cache
+C:\Users\thita\source\repos\IT391_Unit6\IT391_Unit6\obj\Debug\IT391_Unit6.exe
+C:\Users\thita\source\repos\IT391_Unit6\IT391_Unit6\obj\Debug\IT391_Unit6.pdb
